@@ -1,12 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 use App\Http\Controllers\AlatLabController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AlatLabController::class, 'index'])->name('alatlab.index');
 Route::get('/alatlab/create', [AlatLabController::class, 'create'])->name('alatlab.create');
